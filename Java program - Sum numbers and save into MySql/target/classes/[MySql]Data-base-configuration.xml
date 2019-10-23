@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigurationMySql>
+ <server>localhost:3307/test1</server>
+ <username>root</username>
+ <password></password>
+</ConfigurationMySql>

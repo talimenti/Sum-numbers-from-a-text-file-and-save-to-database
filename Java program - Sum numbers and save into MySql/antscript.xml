@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project java_programming_exam2 with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR file Export Wizard-->
+    <!--ANT 1.7 is required-->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/problem2.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="java_programming_exam2.App"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ mysql-connector-java-8.0.17.jar mysql-connector-java-8.0.17.jar jdom-2.0.2.jar dom-2.3.0-jaxb-1.0.6.jar protobuf-java-3.6.1.jar xml-apis-1.0.b2.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="${dir.jarfile}/target/classes"/>
+            <zipfileset dir="C:/Users/Traian/Downloads/mysql-connector-java-8.0.17/mysql-connector-java-8.0.17" includes="mysql-connector-java-8.0.17.jar"/>
+            <zipfileset dir="C:/Users/Traian/.m2/repository/mysql/mysql-connector-java/8.0.17" includes="mysql-connector-java-8.0.17.jar"/>
+            <zipfileset dir="C:/Users/Traian/.m2/repository/org/jdom/jdom/2.0.2" includes="jdom-2.0.2.jar"/>
+            <zipfileset dir="C:/Users/Traian/.m2/repository/org/w3c/dom/2.3.0-jaxb-1.0.6" includes="dom-2.3.0-jaxb-1.0.6.jar"/>
+            <zipfileset dir="C:/Users/Traian/.m2/repository/com/google/protobuf/protobuf-java/3.6.1" includes="protobuf-java-3.6.1.jar"/>
+            <zipfileset dir="C:/Users/Traian/.m2/repository/xml-apis/xml-apis/1.0.b2" includes="xml-apis-1.0.b2.jar"/>
+        </jar>
+    </target>
+</project>

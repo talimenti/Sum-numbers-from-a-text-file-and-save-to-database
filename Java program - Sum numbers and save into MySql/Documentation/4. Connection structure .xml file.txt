@@ -1,0 +1,20 @@
+CONNECTION STRUCTURE OF .XML FILE
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+ <server>HOST:PORT/DATABASE</server>
+ <username>USERNAME</username>
+ <password>PASSWORD</password>
+</Configuration>
+
+For a correct connection you must replace the content 
+of the following labels:
+
+-Enter the connection path to your database between the labels <server>
+Example: <server>localhost:3036/test</server>
+
+-Enter the username to access the database between the labels <username>
+Example: <username>traian</username>
+
+-Enter the password to access the database between the labels <password>
+Example: <password>1234</password>

@@ -1,0 +1,37 @@
+/**
+ * App name:  	 Java Programming exam Problem 2
+ * Description:  Java exam for Commviva
+ * Version:      1.0.0
+ * Author:       Alimenti Bel Traian <traian.alimentibel@gmail.com>
+ * Date:         24 / 09 / 2019
+*/
+
+DEFINITION AND SPECIFICATION OF REQUIREMENTS
+
+This is a software project developed as a java evaluation exam for
+Comviva's selection process.
+
+This executable represents the solution to problem 2.
+
+The project was developed in Java with the use of Maven for project management.
+
+The main objective of this project is to return the total amount of 
+all the numbers in a given plain text file and save them in a database.
+The plain text file can be loaded manually or by entering its path.
+The result is provided in the format:
+  " Total amount: x1 + x2 + x3 + ... + xn = [total amount] "
+And it will also tell if the data was saved correctly or not.
+
+The program only connects to a MySql database and the data connection will be read
+by the program through the Data-base-configuration.xml file that is located in the
+root of the program. If the data read in the .xml file is not correct, you will 
+be asked to indicate the location of another .xml file with the correct data 
+for connection to the database(*)
+If the table does not exist in the database it will be created automatically.
+The file name, total sum and timestamp will be saved in the database.
+
+(*)You can review the structure that the .xml file must have in the file:
+\Documentation\Connection structure .xml file.txt 
+
+To run the program you must run the file that is in the main folder
+with the name "problem2.jar" or "problem2.cmd"

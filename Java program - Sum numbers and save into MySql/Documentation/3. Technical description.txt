@@ -1,0 +1,70 @@
+TECHNICAL DESCRPTION
+
+______________________________________________________________________________
+\App.java
+-main(String[] args)
+Main application of the program.
+Call the choosefile () method of the ReadFromConsole class that allows 
+the user to choose the plain text file and loop until a suitable file 
+with the program requirements is chosen.
+Once a suitable file has been chosen, call the print(path) method 
+of the PrintResult class to obtain the result and display it by console.
+
+______________________________________________________________________________
+\Console\ReadFromConsole.java
+-String chooseFile(String ask)
+This method asks the user for the file path or the manual selection
+of the file and return it's path.
+
+______________________________________________________________________________
+\DB\InitializeDataBase.java
+-InitializeDataBase()
+The constructor of this class tries to initiate the connection to the database 
+through the .xml file located in the root. If the connection is unsuccessful, 
+it will ask the user to manually enter the location of the correct .xml file.
+
+-CorrectXmlForm()
+Private method of the class, used by the constructor, to verify if the .xml 
+file has the correct format specified in the documentation. Return a boolean.
+
+-insertDates(String name, float total, TimeStamp timestamp)
+Public method that encapsulates the insertion of data in the database. 
+If you cannot enter data because the table does not exist, call the 
+createTable() method of the ConexionBD class.
+
+______________________________________________________________________________
+\DB\ConexionBD.java
+-ConexionBD (String connection, String username, String password)
+Create the connection to the MySql database. The data for the connection is
+received by parameter.
+
+\DB\ReadXml.java
+-String[] getXmlDates (String path)
+Method that obtain the data of connection to the database through the .xml file. 
+If the file is correct, call the XmlDates (File file) method that is responsible
+for browsing the .xml connection file. 
+If the .xml file is not correct, ask the user for the correct .xml file path.
+
+______________________________________________________________________________
+\FileFunctions\CheckTypeOfFile.java
+-boolean check (String path, String type)
+This method receives a path and a type and returns true if the file exists and 
+it's mimeType is equal to type or false otherwise.
+
+\FileFuncionts\ReadFile.java
+-Iterator<Number> read (String path)
+This method receives the path to the selected file and returns 
+an iterator with all the file's numbers inside.
+
+______________________________________________________________________
+\PrintFunctions\Header.java
+-printHeader (String problemnumber)
+Print the program header. Receives by parameter the number of the 
+problem in question to show it.
+
+\PrintFunctions\PrintResult.java
+-flotat print (String path)
+This method receives the path of the selected file and returns a float. 
+This method calls the Read () method of the ReadFile class and requests 
+the iterator with all the numbers contained in the file to obtain it's 
+total amount, display it per console and return the total sum.
